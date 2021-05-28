@@ -1,4 +1,3 @@
-#轮廓指数
 library(Seurat)
 library(tidyverse)
 library(tibble)
@@ -11,7 +10,7 @@ reduction <- "pca"
 res<- snakemake@wildcards[["res"]]
 pc<- snakemake@wildcards[["pc"]]
 mtchs <- readRDS(snakemake@input[[1]])
-seurat_obj <- readRDS("rawdata/pbmc3k.rds")
+seurat_obj <- readRDS("rawdata/sample.rds")
 
 find_clusters <- function(
                           obj,

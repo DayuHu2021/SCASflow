@@ -5,7 +5,7 @@ library(dplyr)
 
 res<- snakemake@wildcards[["res"]]
 pc<- snakemake@wildcards[["pc"]]
-seurat_obj <- readRDS("rawdata/pbmc3k.rds")
+seurat_obj <- readRDS("rawdata/sample.rds")
 
 find_clusters <- function(
                           obj,

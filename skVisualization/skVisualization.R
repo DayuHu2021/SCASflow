@@ -8,7 +8,7 @@ library(ggsci)
 source("Functions.R")
 
 
-results_path <- ("~/Desktop/resultspmbc/")
+results_path <- ("~/Desktop/results-Ding//")
 pc <- 30
 res <- c(0.1,0.5,1, 1.5, 2, 4,8,16)
 
@@ -25,9 +25,7 @@ best_res <- FindBestRes(scores)
 
 
 
-
-
-####Select the best res####
+####Select the best Res####
 ggplot(scores_meds, aes(factor(res), med)) +
   geom_crossbar(
     aes(ymin = low_med, ymax = high_med),
@@ -59,16 +57,9 @@ ggplot(scores_meds, aes(factor(res), med)) +
     axis.ticks = element_line(colour = "black"),
   )
 
-ggsave(
-  filename = paste0(results_path,"silhouette_of_each_res_pc_",pc,".png"),
-  dpi = 300,
-  height = 3.5,
-  width = 3.5,
-  units = "in"
-)
 
 
-####Stable ratio####
+####Stable cluster ratio####
 stable_cluster<-scores %>%
   filter(avg_sil >= 0.7)%>%
   group_by(res) %>%
@@ -106,13 +97,7 @@ ggplot(stable_cluster, aes(factor(res), percent)) +
     axis.ticks = element_line(colour = "black"),
   )+scale_fill_lancet()
 
-ggsave(
-  filename = paste0(results_path, "stable_ratio.png"),
-  dpi = 600,
-  height = 3.5,
-  width = 3.5,
-  units = "in"
-)
+
 
 
 ####Select the best PCs####
@@ -174,13 +159,6 @@ ggplot(b1_meds, aes(factor(pcs), med)) +
     axis.ticks = element_line(colour = "black"),
   )
 
-ggsave(
-  filename = paste0(results_path,"silhouette_of_each_res_16.png"),
-  dpi = 600,
-  height = 3.5,
-  width = 3.5,
-  units = "in"
-)
 
 
 

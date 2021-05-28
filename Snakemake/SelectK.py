@@ -12,7 +12,7 @@ rule all:
 
 rule SubSample:
     input:
-        "rawdata/pbmc3k.rds"
+        "rawdata/sample.rds"
     output:
         "results/SubSample_resolution_{res}_PC_{pc}.rds"
     script: "scripts/SubSample.R"
