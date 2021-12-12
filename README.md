@@ -1,4 +1,4 @@
-# SelectK  
+# SACSflow
 
 The goal of SelectK is to assess the stability of single-cell clusters by subsampling and clustering the cells, providing visualization method for comparing clusters and selecting the optimum suggested parameter for clustering.
 
