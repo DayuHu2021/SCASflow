@@ -1,6 +1,6 @@
 # SACSflow
 
-The goal of SelectK is to assess the stability of single-cell clusters by subsampling and clustering the cells, providing visualization method for comparing clusters and selecting the optimum suggested parameter for clustering.
+The goal of SACSflow is to assess the stability of single-cell clusters by subsampling and clustering the cells, providing visualization method for comparing clusters and selecting the optimum suggested parameter for clustering.
 
 For now, three steps are performed.
 
@@ -36,7 +36,7 @@ R
 snakemake -np 
 
 # real run
-snakemake -s snakemakefile(here is SelectK.py)
+snakemake -s snakemakefile(here is SACSflow.py)
 
 
 ```
